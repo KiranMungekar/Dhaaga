@@ -30,7 +30,7 @@ function LeftSidebar() {
                     <SignOutButton signOutCallback={() => router.push('/sign-in')}>
                         <div className="cursor-pointer leftsidebar_link">
                             <Image src='/assets/logout.svg' alt='logout' width={24} height={24}/>
-                            <p className='max-lg:hidden'>{'Logout'}</p>
+                            <p className='max-md:hidden'>{'Logout'}</p>
                         </div>
                     </SignOutButton>
                 </SignedIn>

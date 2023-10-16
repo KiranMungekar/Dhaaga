@@ -15,8 +15,10 @@ function Bottombar() {
             {sidebarLinks.map(link => {
                     const isActive = (pathName.includes(link.route) && link.route.length > 1) || pathName === link.route; 
                     console.log("pathname: "+ pathName + " - link route: " + link.route); 
-                    return ( <Link key={link.label} href={link.route} className={`leftsidebar_link ${isActive && 'bg-primary-500'}`}>
+                    return ( 
+                    <Link key={link.label} href={link.route} className={`bottombar_link ${isActive && 'bg-primary-500'}`}>
                         <Image src={link.imgURL} alt={link.label} width={24} height={24}/>
+                        <p className="text-subtle-medium text-slate-50 max-sm:hidden">{`${link.label.split(/\s+./)[0]}`}</p>
                     </Link>
                     )
                 })
